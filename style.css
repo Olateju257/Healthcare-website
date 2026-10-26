@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header span a {
+    color: rgb(19, 108, 212);
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#hamburger {
+    background: none;
+    border: none;
+    color: rgb(19, 108, 212);
+    display: none;
+}
+
+#hamburger svg{
+    width: 20px;
+    height: 20px;
+}
+
+#hamburger :hover {
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(19, 108, 212);
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+
+#appointment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem;
+    background: rgb(19, 108, 212);
+    border: none;
+    border-radius: 50px;
+    color: white;
+}
+
+#appointment span {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#appointment span svg {
+    color: black;
+    height: 20px;
+    width: 20px;
+}
+
+main {
+    padding: 1rem;
+    position: relative;
+}
+
+.img1-container {
+    width: 100%;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.img1-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 0;
+    filter: brightness(0.7);
+}
+
+.img1-description {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    color: white;
+    width: 80%;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.img1-description h1 {
+   font-size: clamp(1.25rem, 4vw, 6rem);
+}
+
+.img1-description p {
+   font-size: clamp(0.85rem, 2vw, 1.3rem);
+}
+
+#contact {
+    background: rgb(19, 108, 212);
+    border: none;
+    padding: 1rem;
+    width: 50%;
+    color: white;
+    border-radius: 50px;
+}
+
+.about-us {
+    width: 100%;
+    margin: 5rem 0rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#docs-img {
+    border-radius: 7px;
+    
+    width: 50%;
+    height: 100%;
+}
+
+#docs-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 20px solid rgba(114, 160, 228, 0.5);
+}
+
+#about {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#about span {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgb(19, 108, 212);
+    text-transform: uppercase;
+}
+
+#about h3 {
+    font-size: clamp(1.25rem, 4vw, 6rem);
+}
+
+#about p {
+    font-size: clamp(0.85rem, 2vw, 1.3rem);
+}
+
+#read-more {
+    padding: 1rem;
+    width: 50%;
+    border-radius: 50px;
+    border: 50px;
+    background: rgb(19, 108, 212);
+    color: white;
+}
+
+main #independent, #independent2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(19, 108, 212);
+    text-transform: uppercase;
+}
+
+main h4,h6 {
+    text-align: center;
+    font-size: clamp(1.25rem, 4vw, 6rem);   
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    background-color: #eae8e8;
+    padding: 2rem;
+    gap: 0.5rem;
+    align-items: flex-start;
+    position: relative;
+}
+
+.box h4 {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.box p {
+    color: #9e9e9e;
+    font-size: 1.2rem;
+}
+
+.box .img {
+    width: 100%;
+    height: 50%;
+}
+
+.box .img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 7px;
+    aspect-ratio: 16 / 12;
+}
+
+.box button {
+    background: rgb(19, 108, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    padding: 1rem;
+    gap: 0.5rem;
+    color: white;
+    z-index: 6;
+    border: none;
+    border-radius: 50px;
+}
+
+.box button span {
+    background: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box button span svg {
+    height: 20px;
+    width: 20px;
+}
+
+.hero {
+    width: 100%;
+    background: rgb(19, 108, 212);
+    color: white;
+    height: 325px;
+    position: relative;
+    padding: 3rem;
+    display: flex;
+    margin: 5rem 0;
+    border-radius: 7px;
+}
+
+.hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.hero-content h5 {
+    font-size: clamp(1.25rem, 4vw, 6rem);
+}
+
+.hero-content p {
+    font-size: clamp(0.85rem, 2vw, 1.3rem);
+}
+
+#book-appointment {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    background: white;
+    color: rgb(19, 108, 212);
+    border-radius: 50px;
+}
+
+#book-appointment:hover {
+    cursor: pointer;
+}
+
+#book-appointment span {
+    background: rgb(19, 108, 212);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.book-appointment span svg {
+    width: 20px;
+    height: 20px;
+}
+
+.hero img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    right: 8%;
+    top: 11px;
+    /* bottom: -20px; */
+    z-index: 8;
+    width: 50%;
+}
+
+.faq {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.faq-img {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    flex: 1 1 300px;
+}
+
+.faq-img span {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(19, 108, 212);
+}
+
+.faq-img h5 {
+    font-size: clamp(1.25rem, 4vw, 6rem);
+}
+
+.faq-img-container {
+    width: 100%;
+}
+
+.faq-img-container img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.faq ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+    flex: 1 1 300px;
+}
+
+.faq ul li {
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    padding: 0.2rem 1rem;
+    background-color: #eae8e8;
+}
+
+.faq ul li span {
+    margin-left: auto;
+    color: black;
+}
+
+.health-tips {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.health-tips-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    text-align: left;
+    width: 30%;
+    flex: 0 200px;
+}
+
+.health-tips-box .tips-img {
+    width: 100%;
+}
+
+.health-tips-box .tips-img img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.health-tips-box h6 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+
+.health-tips-box p {
+    font-size: 1.1rem;
+}
+
+.health-tips-box button {
+    border-radius: 50px;
+    border: none;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(19, 108, 212);
+}
+
+footer {
+    background: rgb(19, 108, 212);
+    color: white;
+    padding: 2rem;
+}
+
+footer .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+}
+
+footer .main-container div ul {
+    list-style: none;
+}
+
+footer .main-container div ul li {
+    margin-bottom: 2rem;
+}
+
+footer .main-container .quicklinks, .socials, .Email, .address {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bold {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#medname {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.white-line {
+    height: 1px;
+    width: 100%;
+    background: white;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    #hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+    }
+
+    nav {
+        display: none;
+        width: 50%;
+    }
+
+    nav#navBar.open {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 40px;
+        left: 100px;
+        background: rgb(255, 255, 255);
+        padding: 1rem;
+        z-index: 5;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-us {
+        flex-direction: column;
+    }
+
+    #docs-img {
+        width: 100%;
+    }
+
+    #about {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
